@@ -41,8 +41,8 @@ listen kipronoh.tech
         bind :80
         mode http
         balance roundrobin
-        server 20205-web-01 44.192.38.3:80 check
-        server 20205-web-02 3.239.82.120:80 check
+        server 448132-web-01 52.91.101.152:80 check
+        server 448132-web-02 54.89.107.231:80 check
 
 frontend www-http
         bind :80
@@ -58,8 +58,8 @@ frontend www-https
 backend www-backend
         balance  roundrobin
         http-request redirect scheme https code 301 if !{ ssl_fc }
-        server 20205-web-01 44.192.38.3:80 check
-        server 20205-web-02 3.239.82.120:80 check
+        server 448132-web-01 52.91.101.152:80 check
+        server 448132-web-02 54.89.107.231:80 check
 
 backend letsencrypt-backend
         server letsencrypt 127.0.0.1:54321
