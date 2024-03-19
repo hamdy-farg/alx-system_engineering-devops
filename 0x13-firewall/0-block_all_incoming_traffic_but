@@ -1,0 +1,7 @@
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow openssh // to allow port 22
+sudo ufw allow 80 to allow http port
+sudo ufw allow 443 to allow https port
+sudo ufw show added // to now which port we allowed to get in 
+sudo ufw enable // to enable firewall
